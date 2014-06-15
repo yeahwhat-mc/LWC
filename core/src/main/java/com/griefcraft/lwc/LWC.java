@@ -745,7 +745,8 @@ public class LWC {
                     return true;
                 }
 
-                if (protection.getAccess(player.getUniqueId().toString(), Permission.Type.PLAYER).ordinal() >= Permission.Access.PLAYER.ordinal()) {
+                String playerId = Integer.toString(PlayerRegistry.getPlayerInfo(player).getId());
+                if (protection.getAccess(playerId, Permission.Type.PLAYER).ordinal() >= Permission.Access.PLAYER.ordinal()) {
                     return true;
                 }
 
